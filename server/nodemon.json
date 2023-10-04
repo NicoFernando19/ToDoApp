@@ -1,7 +1,7 @@
 {
-    "env": {
-      "MONGODB_ATLAS_USERNAME": "username",
-      "MONGODB_ATLAS_PASSWORD": "password",
-      "MONGODB_ATLAS_DBNAME": "databaseName"
-    }
+  "env": {
+    "MONGODB_COMPASS_USERNAME": "username",
+    "MONGODB_COMPASS_PASSWORD": "password",
+    "MONGODB_COMPASS_DBNAME": "ToDoApp"
   }
+}
