@@ -10,6 +10,13 @@ const todoSchema: Schema = new Schema(
         status: {
             type: String,
             required: true
+        },
+        priority: {
+            type: String,
+            required: true
+        },
+        deleted_at: {
+            type: Date,
         }
     },
     { timestamps: true }

@@ -6,6 +6,7 @@ import {
     getTodo,
     addTodo,
     updateTodo,
+    softDelete,
     deleteTodo
 } from '../controllers/todos'
 
@@ -19,6 +20,8 @@ router.get('/api/todo/:id', getTodo)
 router.post('/api/add-todo', jsonParser, addTodo)
 
 router.put('/api/update-todo/:id', jsonParser, updateTodo)
+
+router.put('/api/soft-delete/:id', jsonParser, softDelete)
 
 router.delete('/api/delete-todo/:id', jsonParser, deleteTodo)
 
