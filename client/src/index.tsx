@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import webFontLoader from 'webfontloader';
+
+webFontLoader.load({
+  google: {
+    families: ['Raleway:400,700:latin', 'Montserrat:700:latin']
+  }
+})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

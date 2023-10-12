@@ -1,16 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </header>
+    <div className="container relative bg-darkPurple mx-auto max-w-lg p-4 box-border min-h-screen">
+
     </div>
   );
 }
