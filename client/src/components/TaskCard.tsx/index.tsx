@@ -23,7 +23,7 @@ const TaskCard: React.FC<Props> = ({title}) => {
                 </span>
             </div>
 
-            <DeleteModal />
+            {/* <DeleteModal /> */}
         </div>
     )
 }

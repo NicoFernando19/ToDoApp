@@ -1,9 +1,11 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import webFontLoader from 'webfontloader';
+import { QueryCache, ReactQueryCacheProvider } from 'react-query'
+
+const queryCache = new QueryCache()
 
 webFontLoader.load({
   google: {
@@ -14,10 +16,13 @@ webFontLoader.load({
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    <ReactQueryCacheProvider queryCache={queryCache}>
+      <App />
+    </ReactQueryCacheProvider>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
