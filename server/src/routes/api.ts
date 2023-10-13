@@ -21,7 +21,7 @@ router.post('/api/add-todo', jsonParser, addTodo)
 
 router.put('/api/update-todo/:id', jsonParser, updateTodo)
 
-router.put('/api/soft-delete/:id', jsonParser, softDelete)
+router.delete('/api/soft-delete/:id', jsonParser, softDelete)
 
 router.delete('/api/delete-todo/:id', jsonParser, deleteTodo)
 

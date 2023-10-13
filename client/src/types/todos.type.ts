@@ -10,3 +10,12 @@ interface Todo {
     updatedAt: string;
     __v: number;
 }
+
+export interface GetTodoResult {
+    result: Todo;
+}
+
+export interface TodoBody {
+    title: string,
+    status?: 'completed' | 'uncompleted'
+}
