@@ -13,6 +13,13 @@ webFontLoader.load({
   }
 })
 
+declare module "react-query/types/index" {
+  interface ReactQueryCacheProviderProps {
+    children?: React.ReactNode;
+    queryCache?: QueryCache;
+  }
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

@@ -13,7 +13,8 @@ export const updateTodo = async (id:string): Promise<void> => {
         if (getTodoRes.status === 200) {
             const todo = getTodoRes.data.result
             const body: TodoBody = {
-                title: todo.title
+                title: todo.title,
+                priority: 'Medium'
             }
 
             todo.status === TodoStatus.completed ? 
