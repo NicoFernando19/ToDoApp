@@ -15,6 +15,9 @@ const todoSchema: Schema = new Schema(
             type: String,
             required: true
         },
+        completedAt: {
+            type: Date,
+        },
         deleted_at: {
             type: Date,
         }

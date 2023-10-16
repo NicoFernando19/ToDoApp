@@ -21,6 +21,10 @@ export const updateTodo = async (id:string): Promise<void> => {
                 body.status = 'uncompleted' : 
                 body.status = 'completed'
 
+            todo.status === TodoStatus.completed ?
+                body.completedAt = null : 
+                body.completedAt = new Date()
+
             await axios({
                 method: 'PUT',
                 url: `http://localhost:8080/api/update-todo/${id}`,

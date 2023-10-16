@@ -4,7 +4,19 @@ import TodoModel from '../../models/todo';
 import { Todo } from '../../types/todo';
 
 export const getTodos = async (req: Request, res: Response) => {
-    const todos: Todo[] = await TodoModel.find()
+    let cutOff = new Date()
+    cutOff.setDate(cutOff.getDate() - 2)
+    const todos: Todo[] = await TodoModel.find({ 
+        $or: [ 
+            { completedAt: { 
+                    $gt: new Date(cutOff.toISOString()) 
+                } 
+            }, 
+            { 
+                completedAt: null 
+            }  
+            ] 
+        }).exec()
 
     res.status(200).json({ todos })
 }
@@ -53,6 +65,7 @@ export const addTodo = async (req: Request, res: Response): Promise<void> => {
         title: body.title,
         status: body.status,
         priority: body.priority,
+        completedAt: null,
         deleted_at: ''
     })
 

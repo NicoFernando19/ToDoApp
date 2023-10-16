@@ -7,6 +7,7 @@ interface Todo {
     title: string;
     status: 'completed' | 'uncompleted';
     priority: string;
+    completedAt: string;
     createdAt: string;
     updatedAt: string;
     __v: number;
@@ -20,4 +21,5 @@ export interface TodoBody {
     title: string,
     status?: 'completed' | 'uncompleted'
     priority: string
+    completedAt?: Date | null
 }
